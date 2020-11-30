@@ -6,6 +6,21 @@ spring:
     password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    database: h2
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: HR
+        jdbc:
+          batch-size: 100
+          fetch-size: 1000
+  data:
+    rest:
+      default-page-size: 50
+      max-page-size: 200
   h2:
     console:
       enabled: true
